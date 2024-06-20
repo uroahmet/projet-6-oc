@@ -1,0 +1,654 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	background-color: #FFFEF8;
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/** end reset css**/
+body main,header {
+	max-width: 1140px;
+	margin:auto;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px auto 90px auto;
+}
+
+/** header Edition **/
+
+.headerEdition {
+	margin-top: 100px !important;
+}
+
+/** end editon **/
+
+main {
+	max-width: 950px !important;
+}
+
+section {
+	margin: 50px 0;
+}
+
+h1{
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C;
+}
+
+h1 > span {
+	font-family: 'Work Sans';
+	font-size:10px;
+	letter-spacing: 0.1em;
+;
+}
+
+h2{
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 30px;
+	color: #1D6154;
+}
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+	font-size: 1rem;
+
+}
+nav img {
+	width: 22px;
+}
+header nav li {
+	padding: 0 10px;
+	/* font-size: 1.2em; */
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+a:hover {
+	color: #B1663C;
+}
+#introduction {
+	display: flex;
+	align-items: center;
+}
+#introduction figure {
+	flex: 1
+}
+#introduction img {
+	display: block;
+	width: 80%;
+}
+
+#introduction article {
+	margin-left: -50px;
+	flex: 1
+}
+#introduction h2 {
+	margin-bottom: 1em;
+}
+
+#introduction p {
+	margin-bottom: 1.5em;
+}
+/* #portfolio h2 {
+	text-align: center;
+	margin-bottom: 1em;
+} */
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 30px;
+	margin-bottom: 80px;
+}
+
+.gallery img {
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+
+}
+#contact {
+	width: 50%;
+	margin: auto;
+}
+#contact > * {
+	text-align: center;
+
+}
+#contact h2{
+	margin-bottom: 20px;
+}
+#contact form {
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label {
+	margin: 2em 0 1em 0;
+}
+#contact textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+input[type="submit"]{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+}
+
+footer nav ul {
+	padding: 22px;
+	display: flex;
+	justify-content: flex-end;
+	margin: 2em auto;
+	max-width: 1440px;
+}
+
+footer {
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+	background-color: white;
+	width: 100%;
+	height: 60px;
+}
+
+/** Filters **/
+
+input[type='radio'] {
+	display: none;
+	appearance: none;
+}
+
+input:checked + label{
+	color: white;
+	background-color: #1D6154;
+}
+
+.filters {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto 50px auto;
+	gap: 10px;
+}
+
+.filters_btn label {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #1D6154;
+	border: solid 1px #1D6154;
+	border-radius: 25px;
+	cursor: pointer;
+	padding: 9px;
+	transition: 200ms;
+	min-width: 80px;
+}
+
+.filters_btn label:hover {
+	color: white;
+	background-color: #1D6154;
+	border-radius: 25px;
+
+}
+
+/** Login **/ 
+
+#login > * {
+	text-align: center;
+}
+
+#login p {
+	margin-top: -10px;
+	text-decoration: underline;
+}
+
+#login {
+	width: 50%;
+	margin: 15em auto;
+}
+
+#login h2{
+	margin-bottom: 20px;
+}
+#login form {
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#login input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#login label {
+	margin: 2em 0 1em 0;
+}
+#login textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+.btn:hover {
+	filter: brightness(115%);
+	cursor: pointer;
+}
+
+#loginStatus {
+	position: absolute;
+	color: red;
+	text-decoration: none !important;
+}
+
+/** -------- Edit mode -------- **/
+
+.modify {
+	display: flex;
+	gap: 10px;
+	margin-right: -320px;
+	position: absolute;
+	cursor: pointer;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.masked {
+	opacity: 0;
+}
+
+.edition_mode p {
+	font-family: 'Work Sans' ;
+	font-size: 16px;
+}
+
+.edition_mode {
+	display: flex;
+	position: fixed;
+	margin-top: -100px;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	background-color: black;
+	width: 100%;
+	height: 60px;
+	gap: 12px;
+}
+
+.edition_modifier {
+	align-items: center;
+	gap: 30px;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2em;
+	margin-top: 7em;
+}
+
+.edition_modifier .edit {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+/** Galerie photos **/
+
+.edition_gallery {
+	border-radius: 15px;
+	background-color: white;
+	width: 580px;
+	padding: 50px;
+	animation: ModalSlide 0.3s both;
+}
+
+.content_gallery {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.edition_gallery button {
+	font-size: medium;
+	color: white;
+	padding: 10px 30px;
+	background-color: #1D6154;
+	border: none;
+	border-radius: 25px;
+	width: 230px;
+}
+
+.edition_gallery button:hover{
+	filter: brightness(115%);
+}
+
+.edition_gallery button::before{
+	margin-top: -40px;
+	margin-left: -190px;
+	position: fixed;
+	content: '';
+	border-top: 1px solid #B3B3B3;
+	padding-right: 500px;
+}
+
+h3 {
+	margin-top: -10px;
+	font-size: 26px;
+	font-family: 'Work sans';
+}
+
+.background {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.6);
+	animation: Modalappear 0.3s both;
+}
+
+/** Modal **/
+
+.edition_gallery i {
+	cursor: pointer;
+}
+
+.edition_gallery .close_trash {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.grid {
+	display: grid;
+	width: 100%;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-column-gap: 10px;
+	grid-row-gap: 35px;
+	/* overflow: scroll; */
+	margin-bottom: 50px;
+	margin-top: 30px;
+}
+
+.grid img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	margin-top: -30px;
+}
+
+.removedProject {
+	position: relative;
+	z-index: 1000;
+	margin-left: 80px;
+	border-radius: 5px;
+	margin-top: 10px;
+	color: white;
+	padding: 10px 5px;
+	background-color: black;
+}
+
+
+/** Add Project **/
+
+.content_addWork {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.content_addWork form {
+	display: flex;
+	width: 450px;
+	flex-direction: column;
+	margin: 40px 0 50px -20px;
+	font-family: 'Work sans';
+	color: #3D3D3D;
+	font-size: 14px;
+}
+
+.content_addWork input,select {
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.content_addWork input,select {
+	width: 100%;
+	height: 50px;
+	border: none;
+	padding: 0 10px;
+	box-shadow: 1px 3px 5px 2px rgba(0, 0, 0, .08);
+	cursor: pointer;
+}
+
+#selectCategory {
+	width: 470px;
+}
+
+#btnAddPhoto {
+	color: #306685;
+	text-align: center;
+	width: 140px;
+	border-radius: 20px;
+	background-color: #CBD6DC;
+	padding: 10px;
+	left: 255px;
+	top: 240px;
+	z-index: 1;
+	position: absolute;
+	cursor: pointer;
+}
+
+#imgfile {
+	color:rgba(0,0,0,0);
+	height: 170px;
+	box-shadow: none;
+	background-color: #E8F1F6;
+}
+
+#previewImg {
+	object-fit: cover;
+	z-index: 5;
+	position: absolute;
+	height: 170px;
+	max-width: 120px;
+	margin-top: 10px;
+	margin-left: 25%;
+}
+
+form ::-webkit-file-upload-button {
+	display: none;
+}
+
+.content_addWork button::before {
+	margin-left: -225px;
+}
+
+.infoImg {
+	position: absolute;
+	top: 280px;
+	left: 290px;
+	font-size: x-small;
+	z-index: 1;
+}
+
+.fa-image {
+	transform: scale(2.5);
+	position: absolute;
+	top: 195px;
+	left: calc(50% - 20px);
+	z-index: 1;
+}
+
+
+/** Animation **/
+
+.modalDisappear {
+	animation: Modaldisappear 0.3s both;
+}
+
+.modalSlideOff {
+	animation: ModalSlideOff 0.3s both;
+}
+
+.errorImg {
+	outline: solid red 1px !important;
+}
+
+.errorImg::before {
+	margin-left: -6px;
+	color: red;
+	z-index: 1000;
+	content: 'Fichier invalide ou manquant';
+	font-size: x-small;
+	position: absolute;
+}
+
+.errorTitle {
+	outline: solid red 1px !important;
+}
+
+.errorTitleDiv::before {
+	margin-top: 12px;
+	margin-left: 5px;
+	color: red;
+	z-index: 1000;
+	content: 'Champ manquant';
+	font-size: x-small;
+	position: absolute;
+}
+
+@keyframes Modalappear {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@keyframes ModalSlide {
+	from {transform: translateX(-50px);}
+	to {transform: translateX(0px);}
+}
+
+@keyframes Modaldisappear {
+	from {opacity: 1;}
+	to {opacity: 0;}
+}
+
+@keyframes ModalSlideOff {
+	from {transform: translateX(0px);}
+	to {transform: translateX(50px);}
+}
+
+/** Animation Login failed */
+
+.loginFailed {
+	animation: loginfailed 0.5s both;
+	border: solid 1px red !important;
+}
+
+@keyframes loginfailed {
+	0% {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	17% {
+		margin-left: -15px;
+		margin-right: 15px;
+	}
+	34% {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	51% {
+		margin-left: -15px;
+		margin-right: 15px;
+	}
+	68% {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	85% {
+		margin-left: -15px;
+		margin-right: 15px;
+	}
+	100% {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
